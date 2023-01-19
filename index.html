@@ -70,7 +70,7 @@
   <!-- /*====================================== * -->
 <div id="promo">
   <div>
-    <img src="./Images/1.jpg" alt="erro">
+    <img id= "slide" src="./Images/1.jpg" alt="erro">
   </div>
   <div>
     <div><p>Automative Sale</p></div>
@@ -743,9 +743,9 @@
                       <img src="./Images/Login_side_data.png" alt="error">
                   </div>
                       <div>
-                          <button id="login_button">Login</button><button id="reg_button">Register</button>
-                      <form>
-                          <input type="text" placeholder="Enter your mobile number or email id"><br>
+                          <button id="login_button">Login</button><button id="reg_button">Register</button> <button id="close">X</button>
+                      <form id="login_form">
+                          <input id="mobile" type="text" placeholder="Enter your mobile number or email id"><br>
                           <input type="submit" value="Login via OTP">
                       </form>
                       <p>Social Login</p>
@@ -760,17 +760,18 @@
               <div id="reg2">
                   <div>
                       <img src="./Images/Login_side_data.png" alt="error">
-                  </div>
-                      <div>
-                          <button id="login_button">Login</button><button id="reg_button">Register</button>
-                      <form>
-                          <input type="email" placeholder="Enter your  email id"><br>
-                          <input type="number" placeholder="Enter your  email id"><br>
-                          <input type="password" placeholder="Enter your password"> 
+                  </div >
+                      <div id="reg22">
+                          <button id="login_button">Login</button><button id="reg_button">Register</button> <button id="close">X</button>
+                          
+                      <form id="reg_form">
+                          <input id="reg_email" type="email" placeholder="Enter your  email id"><br>
+                          <input id="reg_number"  type="number" placeholder="Enter your  mobile number"><br>
+                          <input id="reg_password" type="password" placeholder="Enter your password"> 
                           <!-- <input id="check" type="checkbox"><br> -->
           
                            <p>By Registering you accept our <a href="">User Agreement</a> and <a href="">Privacy Policy</a><br></p>
-                          <input type="submit" value="Register">    
+                          <input id="registration_done" type="submit" value="Register">    
                       </form>
                       <p>Register with</p>
                       <button>Continue with Facebook</button>
@@ -779,18 +780,22 @@
           <!-- ======================================================= -->
           
           <!-- otp page -->
-          <body>
+    
               <div id="verify">
+
                   <div>
                       <img src="./Images/Login_side_data.png" alt="error">
                   </div>
                       <div>
+                        <button  id="login_button">Back</button>
                           <h2>Verification</h2>
                           <p>Please enter the OTP sent to akhtaransari.info@gmail.com</p>
                           <p>(If OTP is missing in Inbox, please check your spam folder).</p>
-                      <form>
-                          <input type="email" placeholder="Enter OTP">
-                          <input id="verify" type="submit" value="Verify"> 
+                          <p></p>
+                          <button id="close">X</button>
+                      <form id="verify_password">
+                          <input id="verify_password_input" type="text" placeholder="Enter OTP or Password">
+                          <input  type="submit" value="Verify"> 
                       </form>
                   </div>
               </div>

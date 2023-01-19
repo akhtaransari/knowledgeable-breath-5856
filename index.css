@@ -378,9 +378,9 @@ height: 120px;
 
 .signin {
     position: absolute;
-    top: 80px;
-    right: 10px;
-    width: 30%;
+    top: 108px;
+    right: 20px;
+    width: 20%;
     border-radius: 10px;
     margin: auto;
     background-color: white;
@@ -546,6 +546,7 @@ p + button{
     border: none;
     width: 200px;
     padding-left: 80px;
+    
 }
 /* ====================================== */
 /* after finsihing of all css work this section is for extra ::-webkit-scrollbar-track */
@@ -553,4 +554,29 @@ p + button{
 #open_sign_in:hover{
     visibility: visible;
     color: red;
+}
+
+
+
+ 
+ #verify form > input:nth-child(2){
+position: absolute;
+top: 300px;
+left: 290px;
+text-align: left;
+
+} 
+
+#close{
+    position: absolute;
+    top: 20px;
+    right: 60px;
+    background-color: white;
+    color: black;
+    border: none;
+}
+#reg2 h1 {
+    font-size: 20px;
+margin-top: 50%;
+
 }
