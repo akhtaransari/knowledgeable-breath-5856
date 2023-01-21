@@ -1,0 +1,596 @@
+/* ======================================
+======================================
+====================================== */
+
+body{
+    margin: 0px;
+    background-color:rgb(237, 246, 249);
+}
+
+
+.nav{
+    display: flex;
+    justify-content: right;
+    font-size: 15px;
+    align-items: center;
+    margin-right: 20px;
+    margin-top: 5px;
+    top: 0px;
+    background-color: azure;
+}
+.nav a{
+    margin-right: 10px;
+    text-decoration: none;
+    color: #757575;
+}
+.nav img{
+    width: 20px;
+    cursor: pointer;
+    
+}
+
+
+#navbar form > input{
+    width: 800px;
+    height: 40px;
+    margin: auto;
+    padding-left: 10px;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    margin-right: -05px;
+}
+#navbar form > button{
+    height: 46px;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    background-color: rgb(238, 134, 97);
+    padding-left: 20px;
+    padding-right: 20px;
+    color: white;
+}
+#navbar{
+    display: flex;
+
+    justify-content: space-around;
+    align-items: center;
+    margin-top: -35px;
+    margin-left: 3%;
+    top: 0px;
+}
+#navbar p{
+    margin-bottom: -4px;
+}
+#navbar a{
+    text-decoration: none;
+    color: teal;
+}
+
+#navbar > button{
+    border: none;
+    background-color: transparent;
+    color: #212121;
+    font-size: 15px;
+
+}
+#navbar > img:nth-child(1) {
+    width: 7%;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    border-radius: 100px;
+    
+}
+#navbar > img:nth-child(3),
+#navbar > img:nth-child(4),
+#navbar > img:nth-child(5),
+#navbar > img:nth-child(6),
+#navbar > img:nth-child(7){
+    width: 25px;
+    margin-bottom: -15px;
+    border: solid black 3px;
+    padding: 2px;
+    border-radius: 20px;
+}
+
+
+/* ======================================
+======================================
+====================================== */
+
+/* #navbar > button:hover{
+ }     */
+
+
+
+/* ======================================
+======================================
+====================================== */
+.banner{
+    display: flex;
+    justify-content: space-between;
+    width: 73%;
+    margin: auto;
+    background-color: teal;
+    padding: 10px 13.5%;
+    align-items: center;
+    margin-top: -6px;
+    font-size: 14px;
+}
+.banner img{
+    width: 6%;
+}
+.banner a{
+    text-decoration: none;
+    color: aliceblue;
+}
+/* ======================================
+======================================
+====================================== */
+#banner2{
+display: flex;
+justify-content: space-around;
+width: 82%;
+margin: auto;
+box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+padding: 10px 9%;
+}
+
+#banner2 a{
+    text-decoration: none;
+    caret-color: black;
+    color: black;
+}
+/* =================================
+=================================
+================================= */
+#promo{
+    display: grid;
+    grid-template-areas:
+    "box1 box1 box1 box1 box1 box2"
+    "box1 box1 box1 box1 box1 box3"
+    "box5 box5 box5 box5 box5 box4"
+    "box6 box6 box6 box6 box6 box6"
+    "box7 box7 box7 box7 box7 box7"
+    "box8 box8 box8 box8 box8 box8"
+    "box9 box9 box9 box9 box9 box9"
+    ;
+    gap: 2px 10px;
+    padding: 20px;
+    background: rgb(237, 246, 249);
+    text-align: center;
+}
+#promo > div:nth-child(1) img{
+    width: 100%;
+    height: 350px;
+}
+#promo > div:nth-child(1){
+    grid-area: box1;
+}
+#promo > div:nth-child(2){
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-area: box5;
+    justify-content: center;
+    background-color: white;
+    align-items: center;
+}
+#promo > div:nth-child(3){
+    grid-area: box2;
+}
+#promo > div:nth-child(4){
+    grid-area: box3;
+}
+#promo > div:nth-child(5){
+    grid-area: box4;
+}
+
+#promo > div:nth-child(3) img,
+#promo > div:nth-child(4) img,
+#promo > div:nth-child(5) img{
+    width:100%;
+    height: 100px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+/* ==================================== */
+/* ==================================== */
+#mid_promo{
+    width: 96%;
+    margin: auto;
+}
+#mid_promo h2{
+    text-align: left;
+    background-color:rgb(237, 246, 249);
+    margin-left: -26px;
+    margin-top: 0px;
+    padding-top: 20px;
+    width: 100%;
+    padding-left: 2%;
+    padding-right: 2%;
+    padding-bottom: 20px;
+    
+}
+
+#mid_promotion{
+    display: flex;
+    justify-content: space-between;
+
+}
+/* ==================================== */
+/* ==================================== */
+.class_head{
+    grid-area: box6;
+}
+#deals{
+    grid-area: box7;
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    background-color:white;
+}
+
+.gad_head{
+    grid-area: box8;
+    text-align: left;
+}
+#gad{
+    grid-area: box9;
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    background-color:white;
+    margin-bottom: 30px;
+}
+
+
+/* ====================================
+====================================
+==================================== */
+
+#pay {
+    text-align: center;
+    display: flex;
+    width: 70%;
+    margin: auto;
+    margin-bottom: 50px;
+    justify-content: space-around;
+}
+
+#pay img {
+    width: 50px;
+}
+.sec{
+    text-align: center;
+}
+.div{
+    border: solid .5px black;
+}
+#about{
+    display: flex;
+    width: 80%;
+    margin: auto;
+    justify-content: space-between;
+}
+
+#about a{
+    text-decoration: none;
+    color: black;
+    margin-bottom: -30px;
+}
+
+/* ====================================
+====================================
+==================================== */
+#socail{
+    display: flex;
+    width: 90%;
+    margin: auto;
+    justify-content: space-between;
+
+}
+#socail > div:nth-child(1) img{
+    width: 40px;
+    margin-right: 30px;
+}
+#socail > div:nth-child(2)  img{
+    width: 650px;
+  
+}
+
+/* ====================================
+====================================
+==================================== */
+#category{
+    width: 96%;
+    margin: auto;
+    margin-bottom: 4%;
+}
+#category a{
+    text-decoration: none;
+    color: black;
+}
+
+/* ====================================
+====================================
+==================================== */
+
+#story{
+    width: 96%;
+    background-color: rgb(238,247,250);
+    margin: auto;
+    padding: 10px 2%;
+
+}
+#story a {
+    text-decoration: none;
+}
+
+/* ====================================
+====================================
+==================================== */
+
+#bottom{
+    display: flex;
+    width: 96%;
+    justify-content: space-between;
+    background-color: white;
+    padding: 20px 2%;
+}
+#bottom a{
+    text-decoration: none;
+    color: black;
+}
+#none{
+    background-color: rgb(238,247,250);
+    height: 20px;
+}
+
+#none2{
+    background-color: rgb(238,247,250);
+    height: 50px;
+    margin-bottom: -2px;
+}
+#discount{
+    display: flex;
+    width: 100%;
+    margin: auto;
+    background-color: rgb(238,247,250);
+}
+#discount img{
+    width: 100%;
+}
+#discount2{
+    background-color: rgb(238,247,250);
+    display: flex;
+    width: 100%;
+    margin: auto;
+    padding-top: 30px;
+}
+#discount2 img{
+width: 100%;
+height: 120px;
+}
+
+
+/* ******************************************
+****************************
+****************************
+****************************
+****************************
+**************************** */
+
+
+.signin {
+    position: absolute;
+    top: 108px;
+    right: 20px;
+    width: 20%;
+    border-radius: 10px;
+    margin: auto;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    display: none;
+}
+.signin > div{
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+}
+
+#sign {
+    background-color: teal;
+    display: flex;
+    justify-content: space-between;
+    color: azure;
+    padding-right: 20px;
+    padding: 5px 20px;
+    border-radius: 10px;
+}
+
+#sign button{
+    color: azure;
+    background-color: orangered;
+    padding: 5px 10px;
+    margin-top: -80px;
+    border-radius: 5px;
+}
+#sign p{
+    font-size: 18px;
+}
+#sign img{
+    width: 40px;
+    border: solid black 3px;
+    padding: 5px;
+    border-radius: 30px;
+}
+.signin > div:nth-child(2) img,
+.signin > div:nth-child(3) img,
+.signin > div:nth-child(4) img,
+.signin > div:nth-child(5) img,
+.signin > div:nth-child(6) img,
+.signin > div:nth-child(7) img,
+.signin > div:nth-child(8) img,
+.signin > div:nth-child(9) img,
+.signin > div:nth-child(10) img,
+.signin > div:nth-child(11) img
+{
+    width: 25px;
+    margin-left: 10px;
+    margin-right: 20px;
+}
+.signin a{
+    text-decoration: none;
+    color: black;
+}
+
+
+
+
+
+/* ++++++++++++++++++++++++++++++++++++++++++++++
+============================================== */
+
+/* login and sigup css */
+
+
+#reg,#reg2,#verify{
+    display: flex;
+    width: 60%;
+    margin: auto;
+    margin-top: 5%;
+    background-color: white;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+
+    position: absolute;
+    top: 70px;
+    right: 280px;
+    visibility: hidden;
+}
+#reg > div:nth-child(1) img,
+#reg2 > div:nth-child(1) img,
+#verify > div:nth-child(1) img{
+    width: 100%;
+    height: 600px;
+    
+
+}
+
+#login_button,#reg_button{
+    border: none;
+    background-color: white;
+    font-size: 20px;
+    margin-left:4% ;
+    padding: 10px;
+}
+#login_button:hover,#reg_button:hover{
+    border-bottom: solid teal;
+}
+
+
+#reg > div:nth-child(2),
+#reg2 > div:nth-child(2),
+#verify > div:nth-child(2)
+{
+    padding-top: 30px;
+    margin: auto;
+    height: 540px;
+}
+
+
+#reg input,#reg2 input,#verify input{
+    width: 500px;
+    height: 40px;
+    margin-top: 30px;
+    
+}
+#reg form > input:nth-child(1),
+#reg2 form > input:nth-child(1),
+#reg2 form > input:nth-child(3),
+#reg2 form > input:nth-child(5),
+#verify form > input:nth-child(3){
+    padding-left: 20px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+#reg form > input:nth-child(3){
+    color: rgb(249, 108, 35);
+    border: solid rgb(249, 108, 35) 2px;
+    background-color: transparent;
+    font-size: 20px;
+    border-radius: 5px;
+}
+p + button{
+    background-color: rgb(53, 80,138);
+    padding: 10px;
+    color: aliceblue;
+    border-radius: 8px;
+    border: none;
+} 
+/* ====================== */
+#reg2 form > input:nth-child(7){
+    background-color: brown;
+    border-radius: 8px;
+    color: white;
+    width: 200px;
+    border: none;
+}
+#reg2 h2 + p{
+    margin-bottom: -10px;
+}
+#verify form > input:nth-child(1){
+    padding-left: 10px;
+    border: none;
+    border-bottom: solid;
+}
+#verify form > input:nth-child(2){
+    background-color: brown;
+    border-radius: 8px;
+    color: white;
+    border: none;
+    width: 200px;
+    padding-left: 80px;
+    
+}
+/* ====================================== */
+/* after finsihing of all css work this section is for extra ::-webkit-scrollbar-track */
+
+#open_sign_in:hover{
+    visibility: visible;
+    color: red;
+}
+
+
+
+ 
+ #verify form > input:nth-child(2){
+position: absolute;
+top: 300px;
+left: 290px;
+text-align: left;
+
+} 
+
+#close{
+    position: absolute;
+    top: 20px;
+    right: 60px;
+    background-color: white;
+    color: black;
+    border: none;
+}
+#reg2 h1 {
+    font-size: 20px;
+    margin-top: 50%;
+
+}
+
+#verify h1{
+    margin-top: 50%;
+}
+
+
+#club:hover{
+    background-color: azure;
+    border: solid black 1px;
+    padding: 5px;
+    color: black;
+    border-radius: 8px;
+    cursor: pointer;
+}

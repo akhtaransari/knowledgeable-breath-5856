@@ -1,0 +1,75 @@
+body{
+    padding: 0;
+    margin: 0px;
+}
+
+#main {
+    background-color: rgb(236, 246, 249);
+}
+#navbar{
+    display:flex;
+   
+    background-color: white;
+}
+#navbar  > div:nth-child(2) img{
+    width: 100px;
+    padding-left: 50%;
+
+}
+#navbar  > div:nth-child(1) img{
+    margin-top: 60%;
+    padding-left: 80%;
+}
+#cart{
+    width: 97%;
+    margin: auto;
+    margin-top: 20px;
+    background-color: white;
+}
+#cart h1{
+padding: 20px;
+margin-bottom: -3px;
+}
+#line{
+    border:solid black .1px;
+}
+#place_order{
+    display: flex;
+    width: 97%;
+    margin: auto;
+    justify-content: space-between;
+
+    padding: 20px;
+}
+
+#pin{
+    display: flex;
+    justify-content: space-between;
+}
+#pin img{
+    width: 30px;
+    margin-top: 10px;
+}
+
+form > input:nth-child(1){
+    height: 40px;
+    padding-left: 10px;
+    border: solid rgb(28, 156, 167) ;
+
+}
+form > input:nth-child(2){
+    background-color: rgb(28, 156, 167);
+    color: white;
+    border: none;
+    height: 45px;
+    margin-left: -5px;
+    padding: 0px 20px;
+}
+#place_button{
+    background-color: orangered;
+    border: none;
+    padding: 20px 80px;
+    font-size: 20px;
+    color: white;
+    border-radius: 8px;
+}
