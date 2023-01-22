@@ -1,27 +1,48 @@
+ 
+/*      ===
+     ===
+     === */
+#sticky{
+    position: sticky;
+}
+
+ 
 
 #sticky{
     position: sticky;
 }
   
+  
 body{
     margin: 0px;
     background-color:rgb(237, 246, 249);
 }
+ 
+
+ 
 body{
     margin: 0px;
     background: rgb(237, 246, 249);;
 }
  
+  
 .nav{
     display: flex;
     justify-content: right;
     font-size: 15px;
     align-items: center;
     margin-right: 20px;
+ 
+    margin-top: 5px;
+    position: sticky;
+    top: 0px;
+    background-color: azure;
+ 
     margin-top: 5px; 
     top: 0px;
     background-color: azure;
     position: sticky;
+  
 }
 .nav a{
     margin-right: 10px;
@@ -30,11 +51,15 @@ body{
 }
 .nav img{
     width: 20px;
+ 
+    cursor: pointer;
+ 
   
     cursor: pointer;
     
 
     cursor: pointer;  
+  
   
 }
 
@@ -53,10 +78,13 @@ body{
     border-top-right-radius: 8px;
     border-bottom-right-radius: 8px;
     background-color: rgb(238, 134, 97);
+ 
+ 
   
 
     background: linear-gradient(90deg ,red,orange);
     background-color: rgb(238, 134, 97);
+  
   
     padding-left: 20px;
     padding-right: 20px;
@@ -64,20 +92,29 @@ body{
 }
 #navbar{
     display: flex;
+ 
+
+ 
   
 
 
+  
   
     justify-content: space-around;
     align-items: center;
     margin-top: -35px;
     margin-left: 3%;
+ 
+    position: sticky;
+    top: 0px;
+ 
   
 
     position: sticky;
     top: 0px;
   
     top: 0px;
+  
 }
 #navbar p{
     margin-bottom: -4px;
@@ -92,6 +129,13 @@ body{
     background-color: transparent;
     color: #212121;
     font-size: 15px;
+ 
+
+}
+#navbar > img:nth-child(1) {
+    width: 7.5%;
+    margin-bottom: 16px;
+ 
   
 
 }
@@ -107,6 +151,7 @@ body{
     width: 7.5%;
     margin-bottom: 16px;
   
+  
 }
 #navbar > img:nth-child(3),
 #navbar > img:nth-child(4),
@@ -120,21 +165,34 @@ body{
     border-radius: 20px;
 }
 
+ 
+
+/*      ===
+     ===
+     === */
+ 
   
 
 /*           ===
           ===
           === */
+  
 
 /* #navbar > button:hover{
  }     */
 
 
 
+ 
+/*      ===
+     ===
+     === */
+ 
 /*           ===
           ===
           === */
 
+  
   
 .banner{
     display: flex;
@@ -154,12 +212,18 @@ body{
     text-decoration: none;
     color: aliceblue;
 }
+ 
+/*      ===
+     ===
+     === */
+ 
   
 /*           ===
           ===
           === */
 
 
+  
   
 #banner2{
 display: flex;
@@ -175,12 +239,18 @@ padding: 10px 9%;
     caret-color: black;
     color: black;
 }
+ 
+/*     =====
+    =====
+    ===== */
+ 
   
 /*         =====
         =====
         ===== */
 
 
+  
   
 #promo{
     display: grid;
@@ -230,10 +300,15 @@ padding: 10px 9%;
     height: 100px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
+ 
+/*      = */
+/*      = */
+ 
   
 /*           = */
 /*           = */
 
+  
   
   
 #mid_promo{
@@ -249,17 +324,28 @@ padding: 10px 9%;
     width: 100%;
     padding-left: 2%;
     padding-right: 2%;
+ 
+    padding-bottom: 20px;
+    
+ 
   
     padding-bottom: 20px;
     
 
     padding-bottom: 20px;   
   
+  
 }
 
 #mid_promotion{
     display: flex;
     justify-content: space-between;
+ 
+
+}
+/*      = */
+/*      = */
+ 
   
 
 }
@@ -275,6 +361,7 @@ padding: 10px 9%;
 }
 /*           = */
 
+  
   
 .class_head{
     grid-area: box6;
@@ -298,12 +385,20 @@ padding: 10px 9%;
     margin-bottom: 30px;
 }
 
+ 
+
+/*      =
+     =
+     = */
+
+ 
   
 
 /*           =
           =
           = */
 
+  
   
   
 #pay {
@@ -337,10 +432,16 @@ padding: 10px 9%;
     margin-bottom: -30px;
 }
 
+ 
+/*      =
+     =
+     = */
+ 
   
 /*           =
           =
           = */
+  
   
   
 #socail{
@@ -359,12 +460,18 @@ padding: 10px 9%;
   
 }
 
+ 
+/*      =
+     =
+     = */
+ 
   
 /*           =
           =
           = */
   
 
+  
   
 #category{
     width: 96%;
@@ -376,11 +483,18 @@ padding: 10px 9%;
     color: black;
 }
 
+ 
+/*      =
+     =
+     = */
+
+ 
   
 /*           =
           =
           = */
 
+  
   
   
 #story{
@@ -393,12 +507,20 @@ padding: 10px 9%;
 #story a {
     text-decoration: none;
 }
+ 
+
+/*      =
+     =
+     = */
+
+ 
   
 
 /*           =
           =
           = */
 
+  
   
   
 #bottom{
@@ -443,6 +565,9 @@ width: 100%;
 height: 120px;
 }
 
+ 
+ 
+  
   
 
 /* ******************************************
@@ -453,6 +578,9 @@ height: 120px;
 **************************** */
 
 
+ 
+ 
+  
   
   
 .signin {
@@ -518,17 +646,27 @@ height: 120px;
     color: black;
 }
 
+ 
+ 
+  
   
 
 
 
 
 /* ++++++++++++++++++++++++++++++++++++++++++++++
+ 
+      ==== */
+ 
             ==== */
+  
 
 /* login and sigup css */
 
 
+ 
+ 
+  
   
   
 #reg,#reg2,#verify{
@@ -548,12 +686,18 @@ height: 120px;
 #reg2 > div:nth-child(1) img,
 #verify > div:nth-child(1) img{
     width: 100%;
+ 
+    height: 600px;
+    
+
+ 
   
     height: 600px;
     
 
   
     height: 600px;   
+  
   
 }
 
@@ -609,10 +753,14 @@ p + button{
     border-radius: 8px;
     border: none;
 } 
+ 
+/*    = */
+ 
   
 /*       = */
   
 
+  
   
 #reg2 form > input:nth-child(7){
     background-color: brown;
@@ -638,9 +786,14 @@ p + button{
     padding-left: 80px;
     
 }
+ 
+/*      === */
+/* after finsihing of all css work this section is for extra ::-webkit-scrollbar-track */
+ 
   
 
 
+  
   
 
 #open_sign_in:hover{
@@ -651,16 +804,24 @@ p + button{
 
 
  
+ 
+
+ 
   
 
 #verify form > input:nth-child(2){
+  
   
 position: absolute;
 top: 300px;
 left: 290px;
 text-align: left;
+ 
+
+ 
   
 
+  
   
   
 } 
@@ -675,6 +836,10 @@ text-align: left;
 }
 #reg2 h1 {
     font-size: 20px;
+ 
+margin-top: 50%;
+
+ 
   
     margin-top: 50%;
 
@@ -699,4 +864,5 @@ text-align: left;
     color: black;
     border-radius: 8px;
     cursor: pointer;
+  
 }
