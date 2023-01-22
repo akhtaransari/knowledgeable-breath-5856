@@ -18,10 +18,13 @@ login.addEventListener("click",()=>{
     reg.style.visibility = "visible"
 })
 
+
+
 let login2 = document.getElementById("club")
 login2.addEventListener("click",()=>{
     reg.style.visibility = "visible"
 })
+
 
 
 let register_button = document.querySelectorAll("#reg_button")
@@ -56,12 +59,26 @@ let login_button = document.querySelectorAll("#login_button")
     })
 
 
+    let registration_done = document.getElementById("registration_done")
+    let sp = ".@"
+
+
     
+
     let login_form = document.getElementById("login_form")
     let verify = document.getElementById("verify")
         login_form.addEventListener("submit",(e)=>{
             e.preventDefault()
             if (login_form.mobile.value.length  >= 10 || login_form.mobile.value.includes(".")===true && login_form.mobile.value.includes("@")===true ){
+
+                reg2.style.visibility = "hidden"
+                reg.style.visibility = "hidden"
+                verify.style.visibility = "visible"
+                login_task(login_form)
+                
+            }else {
+                alert(" Enter Mobile or email")
+
                 // reg2.style.visibility = "hidden"
                 // reg.style.visibility = "hidden"
                 // verify.style.visibility = "visible"
@@ -69,6 +86,7 @@ let login_button = document.querySelectorAll("#login_button")
                 
             }else {
                 alert(" Enter Correct Mobile or email")
+
             }
 
 
@@ -102,6 +120,12 @@ let login_button = document.querySelectorAll("#login_button")
 // below need to wrok on login and re directing to new page and changing all link 
 
 
+let reg_form = document.getElementById("reg_form")
+let reg_data = JSON.parse(localStorage.getItem("reg_data")) || []
+let regg22 = document.getElementById("reg22")
+let reg22_h1 = document.createElement("h1")
+
+
 function login_number(mobile) {
     for (let i = 0 ; i < reg_data.length ;i ++){
         if (mobile === reg_data[i].reg_number){
@@ -129,6 +153,7 @@ let reg_data = JSON.parse(localStorage.getItem("reg_data")) || [ {email:"test@te
 let regg22 = document.getElementById("reg22")
 let reg22_h1 = document.createElement("h1")
 
+
         reg_form.addEventListener("submit",(e)=>{
             e.preventDefault()
             let reg_obj = {
@@ -136,6 +161,40 @@ let reg22_h1 = document.createElement("h1")
                 reg_number : reg_form.reg_number.value,
                 reg_password : reg_form.reg_password.value
             }
+
+           
+            reg_data.forEach(element => {
+                if (element.reg_number === reg_form.reg_number.value || element.reg_email === reg_form.reg_email.value ){
+                    regg22.innerHTML = ""
+                    reg22_h1.innerText = "Hey You Are Already registerd with us please login"
+                    regg22.append(reg22_h1)
+
+                setTimeout(() => {
+                reg2.style.visibility = "hidden"
+                reg.style.visibility = "visible"
+                verify.style.visibility = "hidden"
+
+                }, 2500);
+                }else {
+                    reg_data.push(reg_obj);
+                    
+                    regg22.innerHTML = ""
+                    reg22_h1.innerText = "Congrats Your regitration Is Successful"
+                    regg22.append(reg22_h1)
+
+                    setTimeout(() => {
+                        reg2.style.visibility = "hidden"
+                        reg.style.visibility = "visible"
+                        verify.style.visibility = "hidden"
+        
+                        }, 2500);
+                }
+            });
+           
+            localStorage.setItem("reg_data",JSON.stringify(reg_data))
+
+        })
+
                 if (reg_obj.reg_number.length >= 10){
                     if ( reg_obj.reg_password.includes("!") ||
                          reg_obj.reg_password.includes("#") ||
@@ -173,12 +232,26 @@ let reg22_h1 = document.createElement("h1")
 
 
 
+
         
         // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++?
 
 
         function login_task(login){
             let verify_password = document.getElementById("verify_password")
+
+            reg_data.forEach(element => {
+                if (element.reg_number === login.mobile.value){
+                    verify_password.addEventListener("submit",(e)=>{
+                        e.preventDefault()
+                        if (element.reg_password === verify_password.verify_password.input.value){
+                            console.log("yes")
+                        }
+                    })
+                }
+            });
+        }
+
             let succes_login = document.getElementById("succes")
             let verify_status = document.querySelector("#succes h2")
                 if (login_number(login.mobile.value) === true){
@@ -226,3 +299,4 @@ let reg22_h1 = document.createElement("h1")
         // ++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
         // cart page begins here with api and appendding
+
