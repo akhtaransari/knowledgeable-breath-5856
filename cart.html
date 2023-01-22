@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart Items</title>
+    <link rel="stylesheet" href="cart.css">
+</head>
+<body>
+   <div id="main">
+    <div id="navbar">
+
+        <div><img src="./Images/icons8-back-arrow-50.png" alt=""></div>
+        <div><img src="./Images/logo.png" alt=""></div>
+    </div>
+    <div id="cart">
+        <H1>My Cart ( <span>1</span> Item )</H1>
+        <div id="line"></div>
+        <div>
+            <div>
+
+        <div><a href="items.html"><img src="./Images/icons8-back-arrow-50.png" alt=""></a></div>
+        <div><img src="./Images/logo.png" alt=""></div>
+    </div>
+    <div id="cart">
+        <H1>My Cart ( <span id="items_total"></span> Item )</H1>
+        <div id="line"></div>
+        <div>
+            <div id="cart-container">
+
+                <!-- append data here from java -->
+            </div>
+        </div>
+        <div id="line"></div>
+        <div id="place_order">
+            <div >
+                <div id="pin">
+                    <div >
+                        <img src="./Images/icons8-place-marker-50.png" alt="">
+                    </div>
+                    <div>
+                        <p>Delivery pincode</p>
+                    </div>
+                </div>
+                <form>
+                    <input type="number" placeholder="Enter Your Pincode">
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
+            <div >
+                <div id="pin">
+                    <div><p>Total</p></div>
+
+                    <div> <p>378</p></div>
+
+                    <div><p><span id="total"></span></p></div>
+
+                </div>
+                <div>
+                   <div id="pin">
+                    <div><h2>Grand Total</h2></div>
+
+                    <div> <h2><span>378</span></h2> </div>
+
+                    <div> <h2><span id="total"></span></h2> </div>
+
+                    </div>
+                    <div> 
+                        <p>Inclusive of all the applicable taxes</p>
+                    </div>
+                   </div>
+                    <div>
+                        <button id="place_button">Place Order</button>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+   </div>
+
+</body>
+</html>
+
+
+   <div id="checkout">
+    <form>
+        <input type="text" placeholder="Fisrt and Last Name"><br>
+        <input type="text" placeholder="Compete Adress"><br>
+        <input type="number" placeholder="Pin Code"><br>
+        <button>Checkout</button>
+    </form>
+</body>
+</html>
+
+<script src="cart.js"></script>
+
