@@ -214,6 +214,13 @@ padding: 10px 9%;
     justify-content: space-between;
 
 }
+
+#mid_promotion img{
+    width: 150px;
+    
+    height: 250px;
+
+}
 /* ==================================== */
 /* ==================================== */
 .class_head{
