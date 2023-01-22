@@ -1,0 +1,218 @@
+/* ======================================
+======================================
+====================================== */
+
+
+body{
+    margin: 0px;
+    background-color: background: rgb(237, 246, 249);;
+}
+
+.nav{
+    display: flex;
+    justify-content: right;
+    font-size: 15px;
+    align-items: center;
+    margin-right: 20px;
+    margin-top: 5px;
+}
+.nav a{
+    margin-right: 10px;
+    text-decoration: none;
+    color: #757575;
+}
+.nav img{
+    width: 20px;
+    cursor: pointer;
+}
+
+
+#navbar form > input{
+    width: 800px;
+    height: 40px;
+    margin: auto;
+    padding-left: 10px;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    margin-right: -05px;
+}
+#navbar form > button{
+    height: 46px;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    background-color: rgb(238, 134, 97);
+    padding-left: 20px;
+    padding-right: 20px;
+    color: white;
+}
+#navbar{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: -35px;
+    margin-left: 3%;
+}
+#navbar p{
+    margin-bottom: -4px;
+}
+#navbar a{
+    text-decoration: none;
+    color: teal;
+}
+
+#navbar > button{
+    border: none;
+    background-color: transparent;
+    color: #212121;
+    font-size: 15px;
+
+}
+#navbar > img:nth-child(1) {
+    width: 7.5%;
+    margin-bottom: 16px;
+}
+#navbar > img:nth-child(3),
+#navbar > img:nth-child(4),
+#navbar > img:nth-child(5),
+#navbar > img:nth-child(6),
+#navbar > img:nth-child(7){
+    width: 25px;
+    margin-bottom: -15px;
+    border: solid black 3px;
+    padding: 2px;
+    border-radius: 20px;
+}
+
+
+/* ======================================
+======================================
+====================================== */
+
+/* #navbar > button:hover{
+ }     */
+
+
+
+/* ======================================
+======================================
+====================================== */
+.banner{
+    display: flex;
+    justify-content: space-between;
+    width: 73%;
+    margin: auto;
+    background-color: teal;
+    padding: 10px 13.5%;
+    align-items: center;
+    margin-top: -6px;
+    font-size: 14px;
+}
+.banner img{
+    width: 6%;
+}
+.banner a{
+    text-decoration: none;
+    color: aliceblue;
+}
+/* ======================================
+======================================
+====================================== */
+#banner2{
+display: flex;
+justify-content: space-around;
+width: 82%;
+margin: auto;
+box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+padding: 10px 9%;
+}
+
+#banner2 a{
+    text-decoration: none;
+    caret-color: black;
+    color: black;
+}
+/* =================================
+=================================
+================================= */
+#promo{
+    display: grid;
+    grid-template-areas:
+    "box1 box1 box1 box1 box1 box2"
+    "box1 box1 box1 box1 box1 box3"
+    "box5 box5 box5 box5 box5 box4"
+    "box6 box6 box6 box6 box6 box6"
+    "box7 box7 box7 box7 box7 box7"
+    "box8 box8 box8 box8 box8 box8"
+    "box9 box9 box9 box9 box9 box9"
+    /* "box10 box10 box10 box10 box10"
+    "box11 box11 box11 box11 box11"  */
+    ;
+    gap: 2px 10px;
+    padding: 20px;
+    background: rgb(237, 246, 249);
+    text-align: center;
+}
+#promo > div:nth-child(1) img{
+    width: 100%;
+    height: 350px;
+}
+#promo > div:nth-child(1){
+    grid-area: box1;
+}
+#promo > div:nth-child(2){
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-area: box5;
+    justify-content: center;
+    background-color: white;
+    align-items: center;
+}
+#promo > div:nth-child(3){
+    grid-area: box2;
+}
+#promo > div:nth-child(4){
+    grid-area: box3;
+}
+#promo > div:nth-child(5){
+    grid-area: box4;
+}
+
+#promo > div:nth-child(3) img,
+#promo > div:nth-child(4) img,
+#promo > div:nth-child(5) img{
+    width:100%;
+    height: 100px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.class_head{
+    grid-area: box6;
+}
+#deals{
+    grid-area: box7;
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    background-color:white;
+}
+
+.gad_head{
+    grid-area: box8;
+    text-align: left;
+}
+#gad{
+    grid-area: box9;
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    background-color:white;
+}
+/* 
+.ess_head{
+    grid-area: box9;
+    text-align: left;
+}
+
+ #ess{
+    grid-area: box11;
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    background-color:white;
+} */
