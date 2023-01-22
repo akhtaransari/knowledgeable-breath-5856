@@ -20,10 +20,16 @@ login.addEventListener("click",()=>{
 
 
 
+
+
+
 let login2 = document.getElementById("club")
 login2.addEventListener("click",()=>{
     reg.style.visibility = "visible"
 })
+
+
+
 
 
 
@@ -59,17 +65,19 @@ let login_button = document.querySelectorAll("#login_button")
     })
 
 
-    let registration_done = document.getElementById("registration_done")
-    let sp = ".@"
-
 
     
 
+    let registration_done = document.getElementById("registration_done")
+    let sp = ".@" 
     let login_form = document.getElementById("login_form")
     let verify = document.getElementById("verify")
         login_form.addEventListener("submit",(e)=>{
             e.preventDefault()
             if (login_form.mobile.value.length  >= 10 || login_form.mobile.value.includes(".")===true && login_form.mobile.value.includes("@")===true ){
+
+
+
 
                 reg2.style.visibility = "hidden"
                 reg.style.visibility = "hidden"
@@ -79,6 +87,8 @@ let login_button = document.querySelectorAll("#login_button")
             }else {
                 alert(" Enter Mobile or email")
 
+
+
                 // reg2.style.visibility = "hidden"
                 // reg.style.visibility = "hidden"
                 // verify.style.visibility = "visible"
@@ -86,6 +96,7 @@ let login_button = document.querySelectorAll("#login_button")
                 
             }else {
                 alert(" Enter Correct Mobile or email")
+
 
             }
 
@@ -118,6 +129,12 @@ let login_button = document.querySelectorAll("#login_button")
 // ============================================================
 // open close animation all part done
 // below need to wrok on login and re directing to new page and changing all link 
+
+
+let reg_form = document.getElementById("reg_form")
+let reg_data = JSON.parse(localStorage.getItem("reg_data")) || [ {email:"test@test.test",reg_number:"",reg_password:""}]
+let regg22 = document.getElementById("reg22")
+let reg22_h1 = document.createElement("h1")
 
 
 let reg_form = document.getElementById("reg_form")
@@ -154,6 +171,7 @@ let regg22 = document.getElementById("reg22")
 let reg22_h1 = document.createElement("h1")
 
 
+
         reg_form.addEventListener("submit",(e)=>{
             e.preventDefault()
             let reg_obj = {
@@ -161,7 +179,6 @@ let reg22_h1 = document.createElement("h1")
                 reg_number : reg_form.reg_number.value,
                 reg_password : reg_form.reg_password.value
             }
-
            
             reg_data.forEach(element => {
                 if (element.reg_number === reg_form.reg_number.value || element.reg_email === reg_form.reg_email.value ){
@@ -194,6 +211,8 @@ let reg22_h1 = document.createElement("h1")
             localStorage.setItem("reg_data",JSON.stringify(reg_data))
 
         })
+
+
 
                 if (reg_obj.reg_number.length >= 10){
                     if ( reg_obj.reg_password.includes("!") ||
@@ -233,6 +252,7 @@ let reg22_h1 = document.createElement("h1")
 
 
 
+
         
         // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++?
 
@@ -240,10 +260,18 @@ let reg22_h1 = document.createElement("h1")
         function login_task(login){
             let verify_password = document.getElementById("verify_password")
 
+            let succes_login = document.getElementById("succes")
+            let verify_status = document.querySelector("#succes h2")
+
+
+
             reg_data.forEach(element => {
                 if (element.reg_number === login.mobile.value){
                     verify_password.addEventListener("submit",(e)=>{
                         e.preventDefault()
+
+                        if (element.reg_password === verify_password.verify_password_input.value){
+
                         if (element.reg_password === verify_password.verify_password.input.value){
                             console.log("yes")
                         }
@@ -263,10 +291,27 @@ let reg22_h1 = document.createElement("h1")
                         e.preventDefault()  
                         console.log(verify_password.verify_password_input.value)
                         if (login_password(verify_password.verify_password_input.value) === true){
+
                             succes_login.innerHTML = ""
                             reg22_h1.innerText = "Login Successful"
                             succes_login.append(reg22_h1)
                             sign_in_hover.innerHTML =  ""
+
+                            let name = ""
+                            for (let i = 0 ; i < element.email.length ;i++){
+                                if (i === 0){
+                                    name += element.email[i].toUpperCase()
+                                    continue
+                                }
+                                if (element.email[i] === "@"){
+                                    break;
+                                }
+                                name+=element.email[i]
+                            }
+                             
+                            sign_in_hover.innerText = name
+
+
                         
                             setTimeout(() => {
                                 reg2.style.visibility = "hidden"
@@ -275,28 +320,31 @@ let reg22_h1 = document.createElement("h1")
                 
                                 }, 2500);
                         }else{
+
+                            console.log("no")
+                            verify_status.innerText = "Wrong Input Try Again"
+                            verify_status.style.color = "red"
+                            setTimeout(() => {
+                                verify_status.innerText = "Verification"
+
                             console.log("no logged")
                             verify_status.innerText = "Wrong Input Try Again"
                             verify_status.style.color = "red"
 
                             setTimeout(() => {
                             verify_status.innerText = "Verification"
+
                             verify_status.style.color = "black"
                             }, 2000);
                         }
                     })
+
+                }
+            });
+
                 }else {
                     alert("Please Regster")
                     reg2.style.visibility = "visible"
                 }
 
         }
-
-
-
-
-
-        // ++++++++++++++++++++++++++++++++++++++++++++++++++++++
-
-        // cart page begins here with api and appendding
-
